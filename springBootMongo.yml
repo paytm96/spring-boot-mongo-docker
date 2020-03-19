@@ -12,7 +12,7 @@ spec:
         name: springboot
     spec:
       containers:
-      - image: akareem225/spring-boot-mongo
+      - image: jaga96/spring-mongo:1
         name: springboot
         ports:
         - name: springboot
@@ -56,13 +56,13 @@ spec:
           containerPort: 27017
           hostPort: 27017
         volumeMounts:
-        - name: mongo-persistent-storage
+        - name: nfs-volume
           mountPath: /data/db
       volumes:
-      - name: mongo-persistent-storage
-        nfs:
-          server: 172.31.35.86
-          path: "/mnt/share/"
+      - name: nfs-volume
+        persistentVolumeClaim:
+          claimName: pvc-nfs-pv1   
+      
 ---
 # Mongo Node Port RC
 apiVersion: v1
