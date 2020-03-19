@@ -34,6 +34,21 @@ spec:
   selector:
     name: springboot
 ---
+#HPA for spring-boot
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: springboot
+  namespace: default
+spec:
+  maxReplicas: 10
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: springboot
+  targetCPUUtilizationPercentage: 8080
+---
 # Mongo host path rc
 apiVersion: v1
 kind: ReplicationController
