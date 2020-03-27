@@ -3,7 +3,7 @@ spring:
     name: spring-boot-monog
 logging:
   file: app.log
-
+#updated
 server:
   ssl:
     key-store: classpath:keystore.p12
