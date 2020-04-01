@@ -48,7 +48,7 @@ spec:
     apiVersion: extensions/v1beta1
     kind: Deployment
     name: springboot
-  targetCPUUtilizationPercentage: 8080
+  targetCPUUtilizationPercentage: 80
 ---
 # Mongo host path rc
 apiVersion: v1
