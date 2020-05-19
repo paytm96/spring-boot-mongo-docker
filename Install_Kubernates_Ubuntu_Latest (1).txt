@@ -1,8 +1,4 @@
-======================================================================================================================================
-Mithun Technologies, Banglore.  Ph: +91-8296242028 / +91-9980923226 
-======================================================================================================================================
-
-Agends: Kubernetes Setup Using Kubeadm In AWS EC2 Ubuntu Servers
+Agends: Kubernetes Setup Using Kubeadm In GCP Compute Engine Ubuntu Servers
 =======
 
 Prerequisite:
