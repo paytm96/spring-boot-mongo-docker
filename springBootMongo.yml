@@ -71,12 +71,12 @@ spec:
           containerPort: 27017
           hostPort: 27017
         volumeMounts:
-        - name: nfs-volume
+        - name: mongo-persistent-storage
           mountPath: /data/db
       volumes:
-      - name: nfs-volume
-        persistentVolumeClaim:
-          claimName: pvc-nfs-pv1   
+      - name: mongo-persistent-storage
+        hostpath:
+          path: /tmp/dbbackup  
       
 ---
 #webhook
